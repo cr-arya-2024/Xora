@@ -5,6 +5,7 @@ import './App.css'
 import Header from './section/header'
 import Hero from './section/Hero'
 import Features from './section/Features'
+import { Pricing } from './section/Pricing'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
  <Header/>
  <Hero/>
  <Features/>
+ <Pricing/>
    </main>
     </>
   )

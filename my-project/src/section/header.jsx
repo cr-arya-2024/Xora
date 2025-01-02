@@ -1,14 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { clsx } from 'clsx'
 import { Link as LinkScroll } from 'react-scroll';
-const NavLink = ({ title }) => (
-  <LinkScroll className='base-bold text-p4  transition-colors 
-  duration-1000 cursor-pointer hover:text-p1 uppercase max-lg:my-4 max-lg:h5' >{title}</LinkScroll>
-)
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled,setHasScrolled]=useState(false)
+  useEffect(()=>{
+    function handleScroll(){
+      setHasScrolled(window.scrollY>32)
+    }
+
+    window.addEventListener("scroll",handleScroll);
+    return ()=>{
+      window.removeEventListener("scroll",handleScroll)
+    }
+  },[])
+  const NavLink = ({ title }) => (
+    <LinkScroll onClick={()=>setIsOpen(false)} to={title} offset={-100} spy smooth  activeClass="nav-active" className='base-bold text-p4  transition-colors 
+    duration-1000 cursor-pointer hover:text-p1 uppercase max-lg:my-4 max-lg:h5' >{title}</LinkScroll>
+  )
   return (
-    <header className='fixed top-0 left-0 z-50 w-full  py-10'>
+    <header className={clsx('fixed top-0 left-0 z-50 w-full  py-10',hasScrolled && 'py-2 bg-black-100 backdrop-blur-[8px] transition-all duration-500 max-lg:py-4')}>
       <div className='container  flex h-14 items-center max-lg:px-5'>
         <a className='lg:hidden  flex-1 cursor-pointer z-2' href='http://localhost:5173/'> {/* the  hidden makes the logo hidden for destop*/}
           <img src="/xora (1).svg" alt=" App Logo" className='w-115  h-55'/>

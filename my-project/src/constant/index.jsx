@@ -27,22 +27,22 @@ export const features = [
   export const details = [
     {
       id: '0',
-      icon: '/images/detail-1.png',
+      icon: 'detail-1 (1).png',
       title: 'AI automated video editing',
     },
     {
       id: '1',
-      icon: '/images/detail-2.png',
+      icon: 'detail-2 (1).png',
       title: 'Collaborate with your team',
     },
     {
       id: '2',
-      icon: '/images/detail-3.png',
+      icon: 'detail-3 (1).png',
       title: 'Ultra fast cloud-engine',
     },
     {
       id: '3',
-      icon: '/images/detail-4.png',
+      icon: 'detail-4 (1).png',
       title: '24 / 7 Customer support',
     },
   ];
