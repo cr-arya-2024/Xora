@@ -123,8 +123,8 @@ export const features = [
         '5 projects',
         '24/7 support',
       ],
-      icon: '/images/circle.svg',
-      logo: '/images/plan-1.png',
+      icon: 'circle (1).svg',
+      logo: 'plan-1 (1).png',
     },
     {
       id: '1',
@@ -138,8 +138,8 @@ export const features = [
         'Unlimited projects',
         'Analytics',
       ],
-      icon: '/images/triangle.svg',
-      logo: '/images/plan-2.png',
+      icon: 'triangle (1).svg',
+      logo: 'plan-2 (1).png',
     },
     {
       id: '2',
@@ -153,8 +153,8 @@ export const features = [
         '50% off per member',
         'Real-time collaboration',
       ],
-      icon: '/images/hexagon.svg',
-      logo: '/images/plan-3.png',
+      icon: 'hexagon (1).svg',
+      logo: 'plan-3 (1).png',
     },
   ];
   
