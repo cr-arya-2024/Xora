@@ -15,6 +15,7 @@ const Header = () => {
       window.removeEventListener("scroll",handleScroll)
     }
   },[])
+  // we write navlink after the useEffectbecause isOpen is a state 
   const NavLink = ({ title }) => (
     <LinkScroll onClick={()=>setIsOpen(false)} to={title} offset={-100} spy smooth  activeClass="nav-active" className='base-bold text-p4  transition-colors 
     duration-1000 cursor-pointer hover:text-p1 uppercase max-lg:my-4 max-lg:h5' >{title}</LinkScroll>
@@ -34,7 +35,7 @@ const Header = () => {
                 <li className='nav-li'>
                   <NavLink title="features" />
                   <div className='dot'></div>
-                  <NavLink title="pricing" />
+                  <NavLink title="pricing" offset={150} />
                 </li>
                 <li className='nav-logo'>
                   <LinkScroll
